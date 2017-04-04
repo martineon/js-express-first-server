@@ -1,0 +1,24 @@
+{
+  "name": "js-express-first-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nitramnoe/js-express-first-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nitramnoe/js-express-first-server/issues"
+  },
+  "homepage": "https://github.com/nitramnoe/js-express-first-server#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "nodemon": "^1.11.0"
+  }
+}
