@@ -1,6 +1,5 @@
 var express = require('express');
 var app = express();
-var users = require('users.js');
 
 app.get('/', function(req, res){
   res.send('hello World');
@@ -8,9 +7,13 @@ app.get('/', function(req, res){
 app.get('/users', (req, res) => {
   res.send('Liste of all Users');
 })
-app.get('/users/:user', (req, res) => {
-  res.send(req.params.user);
-})
+
+
+app.get('/users/:user', function(req, res) {
+    res.render('users.ejs', {user: req.params.user});
+});
+
+
 
 app.get('/*', (req, res) => {
   res.send('Home Page');
