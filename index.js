@@ -1,12 +1,13 @@
 var express = require('express');
 var app = express();
-var users = require('users.js');
 
 app.get('/', function(req, res){
   res.send('hello World');
 })
 app.get('/users', (req, res) => {
-  res.send('Liste of all Users');
+  res.send(users.map((item) => {
+
+  }));
 })
 app.get('/users/:user', (req, res) => {
   res.send(req.params.user);
