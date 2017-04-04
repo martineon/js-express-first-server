@@ -9,9 +9,13 @@ app.get('/users', (req, res) => {
 
   }));
 })
-app.get('/users/:user', (req, res) => {
-  res.send(req.params.user);
-})
+
+
+app.get('/users/:user', function(req, res) {
+    res.render('users.ejs', {user: req.params.user});
+});
+
+
 
 app.get('/*', (req, res) => {
   res.send('Home Page');
