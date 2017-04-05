@@ -69,11 +69,11 @@ res.send('cette page nexiste pas ')
 });
 
 app.get('/users/:userId/project', (req, res) =>{
-  const userProject = project.find( (item)=>{
+  let userProject = project.filter( (item)=>{
     return item.userId === Number(req.params.userId)
   })
   if(userProject){
-    res.render('userProject.ejs', {userId : req.params.userId})
+    res.render('userProject.ejs', {userProject : userProject})
   }
   else{
     res.send('ya rien ici dégage')
