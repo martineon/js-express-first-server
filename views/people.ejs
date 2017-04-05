@@ -13,7 +13,7 @@
     </p>
     <div class="people-container">
       <% for(var i=0; i<people.length; i++) { %>
-        <a href=<%= people[i].id%>>
+        <a href= <%= 'users/' %><%= people[i].id %><%= '/project' %>>
           <%= people[i].firstName %>
         </a>
       <% } %>

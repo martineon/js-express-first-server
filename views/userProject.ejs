@@ -3,10 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="/css/master.css">
   </head>
   <body>
+<<<<<<< HEAD
 <p>
 <%= userProject.name%>
 </p>
+=======
+      <% include header.ejs %>
+      <div class="user-project">
+        <% for(var i=0; i<userProject.length; i++) { %>
+          <a href= <%= userProject[i].githubUrl %>>
+            <%= userProject[i].name %>
+          </a>
+        <% } %>
+    </div>
+>>>>>>> 928e733b26120d8c84a0bc8dcc0d91042d3ee326
   </body>
 </html>

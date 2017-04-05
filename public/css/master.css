@@ -77,3 +77,11 @@ body{
   text-align: center;
   border-radius: 50px;
 }
+
+/* USER PROJECT */
+.user-project{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
