@@ -4,22 +4,36 @@ const people = require('./data/users.js');
 const project = require('./data/project.js');
 app.use(express.static('public'));
 
+
+
 app.get('/', function(req, res){
   res.render('homepage.ejs');
 });
+
+
+
+
 
 app.get('/users', (req, res) => {
     res.render('people.ejs', {people: people});
 
   });
 
+
+
+
+
+
 app.get('/project', (req, res) =>{
   res.render('Project.ejs', {project: project});
 });
 
 
+
+
+
   app.get('/about', function(req, res){
-    res.render('about.ejs', {salutation: 'bonjour'});
+    res.render('about.ejs', {salutation: 'Bonjour la famille'});
   });
   /*
     const TabName = user.map(item) =>{
@@ -41,7 +55,6 @@ app.get('/project', (req, res) =>{
   }
   });
 
-
 app.get('/users/:id', (req, res) =>{
   const user = people.find( (item)=>{
     return item.id === Number(req.params.id)
@@ -52,6 +65,18 @@ app.get('/users/:id', (req, res) =>{
 else{
 res.send('cette page nexiste pas ')
 }
+});
+
+app.get('/users/:userId/project', (req, res) =>{
+  const userProject = project.find( (item)=>{
+    return item.userId === Number(req.params.userId)
+  })
+  if(userProject){
+    res.send(userProject.name)
+  }
+  else{
+    res.send('ya rien ici dégage')
+  }
 });
 
 app.get('/*', (req, res) => {
