@@ -14,9 +14,7 @@ app.get('/about', function(req, res){
 app.get('/users', (req, res) => {
     let people = [{id: 0, firstName: 'Michel'}, {id: 1, firstName: 'Osman'}, {id: 2, firstName: 'Tandi'}, {id: 3, firstName: 'Daniel'}, {id: 4, firstName: 'Faustino'}, {id: 5, firstName: 'Ijacques'}];
     res.render('people.ejs', {people: people});
-<<<<<<< HEAD
-});
-=======
+
   });
     /*const TabName = user.map(item) =>{
                     return item.firstName
@@ -36,8 +34,6 @@ else{
 res.send('cette page nexiste pas ')
 }
   */
-
->>>>>>> 93eed4905b11df3c78b4191f1146ec5e11ad9de9
 app.get('/users/:user', function(req, res) {
     res.render('users.ejs', {user: req.params.user});
 });
