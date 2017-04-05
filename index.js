@@ -34,6 +34,7 @@ app.get('/project', (req, res) =>{
   app.get('/about', function(req, res){
     res.render('about.ejs', {salutation: 'bonjour'});
   });
+
   /*
     const TabName = user.map(item) =>{
                     return item.firstName
@@ -78,12 +79,12 @@ res.send('cette page nexiste pas ')
 });
 
 
-app.get('/user/:userId/project', (req, res) =>{
+app.get('/users/:userId/project', (req, res) =>{
   const userProject = project.find( (item)=>{
     return item.userId === Number(req.params.userId)
   })
   if(userProject){
-    res.send(userProject.name)
+    res.render('userProject.ejs', {userId : req.params.userId})
   }
   else{
     res.send('ya rien ici dégage')
