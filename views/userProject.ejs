@@ -9,7 +9,7 @@
       <% include header.ejs %>
       <div class="user-project">
         <% for(var i=0; i<userProject.length; i++) { %>
-          <a href= <%= userProject[i].githubUrl %>>
+          <a href=<%= '/project/' %><%= userProject[i].id %>>
             <%= userProject[i].name %>
           </a>
         <% } %>
