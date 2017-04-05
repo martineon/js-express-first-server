@@ -83,11 +83,7 @@ app.get('/users/:userId/project', (req, res) =>{
     return item.userId === Number(req.params.userId)
   })
   if(userProject){
-<<<<<<< HEAD
-    res.render('userProject.ejs', {userId : req.params.userId, project:project, userProject: userProject})
-=======
-    res.render('userProject.ejs', {userProject : userProject})
->>>>>>> 928e733b26120d8c84a0bc8dcc0d91042d3ee326
+'userProject.ejs', {userProject : userProject}
   }
   else{
     res.send('ya rien ici dégage')
