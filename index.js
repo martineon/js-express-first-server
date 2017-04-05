@@ -56,6 +56,11 @@ app.get('/project', (req, res) =>{
   }
   });
 
+
+
+
+
+
 app.get('/users/:id', (req, res) =>{
   const user = people.find( (item)=>{
     return item.id === Number(req.params.id)
@@ -68,17 +73,25 @@ res.send('cette page nexiste pas ')
 }
 });
 
+
+
+
+
+
 app.get('/users/:userId/project', (req, res) =>{
   const userProject = project.find( (item)=>{
     return item.userId === Number(req.params.userId)
   })
   if(userProject){
-    res.render('userProject.ejs', {userId : req.params.userId})
+    res.render('userProject.ejs', {userId : req.params.userId, project:project, userProject: userProject})
   }
   else{
     res.send('ya rien ici dégage')
   }
 });
+
+
+
 
 app.get('/*', (req, res) => {
   res.send('Home Page');
