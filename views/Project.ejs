@@ -3,9 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Project</title>
+    <link rel="stylesheet" href="/css/master.css">
   </head>
   <body>
-    <p>Voici la liste des projets des étudiants de simplon
+    <% include header.ejs %>
+    <p>
+      Voici la liste des projets des étudiants de simplon
     </p>
       <ul>
         <% for(var i=0; i<project.length; i++) { %>

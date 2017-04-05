@@ -3,18 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>people</title>
-    <link rel="stylesheet" href="/css/people.css" type="text/css">
+    <link rel="stylesheet" href="/css/master.css" type="text/css">
   </head>
   <body>
-    <p>Voici la liste des étudiants de simplon
+  <div class="main-container">
+    <% include header.ejs %>
+    <p>
+      Voici la liste des étudiants de simplon
     </p>
-      <ul>
-        <% for(var i=0; i<people.length; i++) { %>
-          <li><%= people[i].id %>
-            <%= people[i].firstName %>
-          </li>
-          <% } %>
-        </ul>
+    <div class="people-container">
+      <% for(var i=0; i<people.length; i++) { %>
+        <a href=<%= people[i].id%>>
+          <%= people[i].firstName %>
+        </a>
+      <% } %>
+    </div>
+  </div>
 
   </body>
 </html>

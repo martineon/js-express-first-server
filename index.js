@@ -16,6 +16,7 @@ app.get('/', function(req, res){
 
 app.get('/users', (req, res) => {
     res.render('people.ejs', {people: people});
+
   });
 
 
@@ -32,21 +33,16 @@ app.get('/project', (req, res) =>{
 
 
   app.get('/about', function(req, res){
-    res.render('about.ejs', {salutation: 'bonjour'});
+    res.render('about.ejs', {salutation: 'Bonjour la famille'});
   });
 
   /*
     const TabName = user.map(item) =>{
                     return item.firstName
   })
-  const TabName2 = TabName.join(',')
-  res.send (TabeName2)
+  const TabName = TabName.join(',')
+  res.send (TabeName)
   */
-
-
-
-
-
 
   app.get('/project/:id', (req, res) =>{
     const Project = project.find( (item)=>{
@@ -60,12 +56,6 @@ app.get('/project', (req, res) =>{
   }
   });
 
-
-
-
-
-
-
 app.get('/users/:id', (req, res) =>{
   const user = people.find( (item)=>{
     return item.id === Number(req.params.id)
@@ -78,7 +68,6 @@ res.send('cette page nexiste pas ')
 }
 });
 
-
 app.get('/users/:userId/project', (req, res) =>{
   const userProject = project.find( (item)=>{
     return item.userId === Number(req.params.userId)
@@ -90,9 +79,6 @@ app.get('/users/:userId/project', (req, res) =>{
     res.send('ya rien ici dégage')
   }
 });
-
-
-
 
 app.get('/*', (req, res) => {
   res.send('Home Page');
