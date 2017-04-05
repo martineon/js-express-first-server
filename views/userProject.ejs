@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>userproject</title>
+  </head>
+  <body>
+    <ul>
+      <% for(var i=0; i<project.length; i++) { %>
+        <li><%= userId[i] %> -
+        <a href='<%= project[i].githubUrl %>'>lien vers github du projet<a/> -
+        </li>
+        <% } %>
+      </ul>
+  </body>
+</html>

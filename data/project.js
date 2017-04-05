@@ -42,4 +42,25 @@ module.exports = [
     githubUrl : 'project/05',
     githubRepo : 'xxxx'
  },
+ {
+    id: 6,
+    userId: 5, // le repo doit correspondre un utilisateur du tableau 'users'
+    name: 'projet prise Yjack numero 2',
+    githubUrl : 'project/06',
+    githubRepo : 'xxxx'
+ },
+ {
+    id: 7,
+    userId: 0, // le repo doit correspondre un utilisateur du tableau 'users'
+    name: 'projet numéro 2 de michel',
+    githubUrl : 'project/07',
+    githubRepo : 'xxxx'
+ },
+ {
+    id: 8,
+    userId: 4, // le repo doit correspondre un utilisateur du tableau 'users'
+    name: 'projet numero 2 faustino',
+    githubUrl : 'project/08',
+    githubRepo : 'xxxx'
+ },
 ];
