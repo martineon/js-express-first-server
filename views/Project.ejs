@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Project</title>
+  </head>
+  <body>
+    <p>Voici la liste des projets des étudiants de simplon
+    </p>
+      <ul>
+        <% for(var i=0; i<project.length; i++) { %>
+          <li><%= project[i].name %> -
+          <a href='<%= project[i].githubUrl %>'>lien vers github du projet<a/> -
+
+          </li>
+          <% } %>
+        </ul>
+  </body>
+</html>
